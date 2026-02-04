@@ -111,51 +111,6 @@
           </div>
         </div>
       </section>
-
-      <section class="lang-get-started">
-        <h2>Exemplo: formulário e envio de email com PHPMailer</h2>
-        <p class="lang-get-started-desc">Este código recebe os campos do formulário (nome, email, mensagem) e envia um email via SMTP. Instale o PHPMailer com Composer: <code>composer require phpmailer/phpmailer</code>. Troque <code>teu_email@gmail.com</code> e a senha de aplicação pelos seus dados.</p>
-        <div class="code-block">
-          <div class="code-block-header">php</div>
-          <pre><code>&lt;?php
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'vendor/autoload.php';
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name    = $_POST["nome"];
-    $email   = $_POST["email"];
-    $message = $_POST["mensagem"];
-
-    $mail = new PHPMailer(true);
-
-    try {
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'teu_email@gmail.com';
-        $mail->Password   = 'pass de aplicação';
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;
-
-        $mail->setFrom($email, $name);
-        $mail->addAddress("teu_email@gmail.com");
-
-        $mail->isHTML(true);
-        $mail->Subject = 'teste';
-        $mail->Body    = nl2br("Name: $name\nEmail: $email\n\nMessage:\n$message");
-
-        $mail->send();
-        echo "Email Enviado!";
-    } catch (Exception $e) {
-        echo "Error: " . $mail->ErrorInfo;
-    }
-}
-?&gt;</code></pre>
-        </div>
-      </section>
     </main>
   </div>
 
