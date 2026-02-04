@@ -98,6 +98,7 @@
   font-size: 1.15em;
   font-weight: 400;
   display: inline-block;
+  margin-left: -0.75rem;
   margin-right: 0.5rem;
   cursor: default;
   color: var(--theme-text);
