@@ -19,7 +19,8 @@
   var codeBlockCopyBtn = document.getElementById('code-block-copy');
 
   function escapeHtml(s) {
-    if (s == null) return '';
+    if (s == null || s === undefined) return '';
+    if (window.ARCHIVON_SANITIZE && window.ARCHIVON_SANITIZE.escapeHtml) return window.ARCHIVON_SANITIZE.escapeHtml(s);
     var div = document.createElement('div');
     div.textContent = s;
     return div.innerHTML;

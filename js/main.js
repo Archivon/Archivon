@@ -26,12 +26,14 @@
     if (!grid || !config || !config.directory) return;
 
     grid.innerHTML = '';
+    var sanitizeUrl = (window.ARCHIVON_SANITIZE && window.ARCHIVON_SANITIZE.sanitizeUrl) ? window.ARCHIVON_SANITIZE.sanitizeUrl : function (u) { return u == null ? '#' : u; };
+    var escapeHtml = (window.ARCHIVON_SANITIZE && window.ARCHIVON_SANITIZE.escapeHtml) ? window.ARCHIVON_SANITIZE.escapeHtml : function (s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; };
     config.directory.forEach(function (column) {
       var col = document.createElement('div');
       col.className = 'directory-column';
       column.forEach(function (item) {
         var a = document.createElement('a');
-        a.href = item.href;
+        a.href = sanitizeUrl(item.href);
         a.textContent = item.label;
         col.appendChild(a);
       });

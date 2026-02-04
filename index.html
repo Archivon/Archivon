@@ -23,7 +23,7 @@
         <span class="header-sep" aria-hidden="true"></span>
         <nav class="nav-main">
           <div class="nav-dropdown">
-            <a href="docs/introducao.html" class="nav-link nav-dropdown-trigger">Documentation</a>
+            <a href="docs/introducao.html" class="nav-link nav-dropdown-trigger"><span class="nav-learn">Learn</span> <strong>Documentation</strong></a>
             <div class="nav-dropdown-menu">
               <span class="nav-dropdown-sep"></span>
               <a href="code-samples.html" class="nav-dropdown-item">Code samples</a>
@@ -46,7 +46,9 @@
         <h1 class="hero-title">Technical documentation</h1>
         <p class="hero-desc">Search for articles, code snippets, and exercises on programming tools and technologies.</p>
         <form class="hero-search" action="index.html" method="get" role="search">
-          <input type="search" name="q" class="hero-search-input" placeholder="Search documentation" aria-label="Search documentation" autocomplete="off">
+          <div class="hero-search-bar">
+            <input type="search" name="q" class="hero-search-input" placeholder="Search documentation" aria-label="Search documentation" autocomplete="off">
+          </div>
           <button type="submit" class="hero-search-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
             Search
@@ -102,6 +104,7 @@
   </footer>
 
   <script src="js/config.js"></script>
+  <script src="js/sanitize.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
