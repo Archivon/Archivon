@@ -1,8 +1,5 @@
 # Archivon
 
-> [!IMPORTANT]  
-> Este repositório não é open source. O uso está sujeito à Archivon Sample Code License.
-
 **Archivon** is a technical documentation project by the company Archivon. It offers articles, code examples, and exercises on programming tools and technologies.
 
 ### Security
@@ -16,3 +13,7 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and [C
 ### Licence
 
 This project is covered by a proprietary licence from **Archivon**. No one may use the Archivon name or project files for study or any other purpose; only the code snippets made available in the Code samples section (for study purposes) may be used for personal study. See [LICENSE](LICENSE).
+
+> [!IMPORTANT]  
+> This repository is not open source. Use is subject to the Archivon Sample Code License.
+
