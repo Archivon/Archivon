@@ -66,4 +66,13 @@ window.ARCHIVON_SAMPLES = [
     code: '<?php\n$host = "localhost"; // database server\n$dbname = "nome_do_banco"; // database name\n$user = "usuario"; // username\n$password = "senha"; // password\n\n// connect to database\ntry {\n  $pdo = new PDO(\n    "mysql:host=$host;dbname=$dbname;charset=utf8",\n    $user,\n    $password\n  );\n  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n  echo "Conectado com sucesso!";\n} catch (PDOException $e) {\n  die("Erro na conexão: " . $e->getMessage());\n}\n?>',
     language: 'php',
   },
+  {
+    id: 8,
+    title: 'PHP: receber formulário e enviar email com PHPMailer',
+    description: 'Recebe dados do formulário (nome, email, mensagem) e envia email via SMTP com PHPMailer. Requer Composer (composer require phpmailer/phpmailer). Configure teu_email e senha de aplicação do Gmail.',
+    date: '02/04/2026',
+    tags: ['PHP', 'Email', 'Form'],
+    code: '<?php\n\nuse PHPMailer\\PHPMailer\\PHPMailer;\nuse PHPMailer\\PHPMailer\\Exception;\n\nrequire \'vendor/autoload.php\';\n\nif ($_SERVER["REQUEST_METHOD"] === "POST") {\n    $name    = $_POST["nome"];\n    $email   = $_POST["email"];\n    $message = $_POST["mensagem"];\n\n    $mail = new PHPMailer(true);\n\n    try {\n        $mail->isSMTP();\n        $mail->Host       = \'smtp.gmail.com\';\n        $mail->SMTPAuth   = true;\n        $mail->Username   = \'teu_email@gmail.com\';\n        $mail->Password   = \'pass de aplicação\';\n        $mail->SMTPSecure = \'tls\';\n        $mail->Port       = 587;\n\n        $mail->setFrom($email, $name);\n        $mail->addAddress("teu_email@gmail.com");\n\n        $mail->isHTML(true);\n        $mail->Subject = \'teste\';\n        $mail->Body    = nl2br("Name: $name\\nEmail: $email\\n\\nMessage:\\n$message");\n\n        $mail->send();\n        echo "Email Enviado!";\n    } catch (Exception $e) {\n        echo "Error: {$mail->ErrorInfo}";\n    }\n}\n?>',
+    language: 'php',
+  },
 ];
