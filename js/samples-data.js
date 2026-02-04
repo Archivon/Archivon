@@ -69,10 +69,16 @@ window.ARCHIVON_SAMPLES = [
   {
     id: 8,
     title: 'PHP: receber formulário e enviar email com PHPMailer',
-    description: 'Recebe dados do formulário (nome, email, mensagem) e envia email via SMTP com PHPMailer. Requer Composer (composer require phpmailer/phpmailer). Configure teu_email e senha de aplicação do Gmail.',
+    description: 'Recebe dados do formulário (nome, email, mensagem) e envia email via SMTP com PHPMailer. Configure teu_email e senha de aplicação do Gmail.',
     date: '02/04/2026',
     tags: ['PHP', 'Email', 'Form'],
     code: '<?php\n\nuse PHPMailer\\PHPMailer\\PHPMailer;\nuse PHPMailer\\PHPMailer\\Exception;\n\nrequire \'vendor/autoload.php\';\n\nif ($_SERVER["REQUEST_METHOD"] === "POST") {\n    $name    = $_POST["nome"];\n    $email   = $_POST["email"];\n    $message = $_POST["mensagem"];\n\n    $mail = new PHPMailer(true);\n\n    try {\n        $mail->isSMTP();\n        $mail->Host       = \'smtp.gmail.com\';\n        $mail->SMTPAuth   = true;\n        $mail->Username   = \'teu_email@gmail.com\';\n        $mail->Password   = \'pass de aplicação\';\n        $mail->SMTPSecure = \'tls\';\n        $mail->Port       = 587;\n\n        $mail->setFrom($email, $name);\n        $mail->addAddress("teu_email@gmail.com");\n\n        $mail->isHTML(true);\n        $mail->Subject = \'teste\';\n        $mail->Body    = nl2br("Name: $name\\nEmail: $email\\n\\nMessage:\\n$message");\n\n        $mail->send();\n        echo "Email Enviado!";\n    } catch (Exception $e) {\n        echo "Error: {$mail->ErrorInfo}";\n    }\n}\n?>',
     language: 'php',
+    note: {
+      title: 'Aviso',
+      text: 'É necessário instalar o Composer e o PHPMailer antes de usar este código. No diretório do projeto, execute: composer require phpmailer/phpmailer. Se ainda não tiver o Composer, baixe em getcomposer.org.',
+      linkUrl: 'https://getcomposer.org/download/',
+      linkText: 'getcomposer.org',
+    },
   },
 ];

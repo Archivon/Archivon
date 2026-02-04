@@ -17,6 +17,9 @@
   var breadcrumbTitleEl = document.getElementById('sample-breadcrumb-title');
   var codeBlock = document.getElementById('sample-view-code-block');
   var codeBlockCopyBtn = document.getElementById('code-block-copy');
+  var noteWrap = document.getElementById('sample-view-note-wrap');
+  var noteTitleEl = document.getElementById('sample-view-note-title');
+  var noteTextEl = document.getElementById('sample-view-note-text');
 
   function escapeHtml(s) {
     if (s == null || s === undefined) return '';
@@ -62,6 +65,19 @@
     if (langEl) langEl.textContent = sample.language || 'text';
     setPageTitle(sample.title);
     if (breadcrumbTitleEl) breadcrumbTitleEl.textContent = sample.title;
+
+    if (sample.note && noteWrap && noteTitleEl && noteTextEl) {
+      noteTitleEl.textContent = sample.note.title || 'Aviso';
+      var text = escapeHtml(sample.note.text || '');
+      if (sample.note.linkUrl && sample.note.linkText) {
+        var link = '<a href="' + escapeHtml(sample.note.linkUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(sample.note.linkText) + '</a>';
+        text = text.replace(escapeHtml(sample.note.linkText), link);
+      }
+      noteTextEl.innerHTML = text;
+      noteWrap.hidden = false;
+    } else if (noteWrap) {
+      noteWrap.hidden = true;
+    }
 
     if (codeBlockCopyBtn) codeBlockCopyBtn.addEventListener('click', copyCode);
   }

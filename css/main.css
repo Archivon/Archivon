@@ -686,6 +686,10 @@ a:hover {
   font-size: 0.8125rem;
 }
 
+.sample-view-note-wrap {
+  margin-bottom: 1rem;
+}
+
 .sample-view-code {
   margin-top: 1rem;
 }
