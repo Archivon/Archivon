@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code sample — Archivon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="icon" href="../src/img/Archivon3.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../index.html" class="logo">
+          <img src="../src/img/Archivon3.png" alt="Archivon" class="logo-img">
+        </a>
+        <span class="header-sep" aria-hidden="true"></span>
+        <nav class="nav-main">
+          <div class="nav-dropdown">
+            <a href="../docs/introducao.html" class="nav-link nav-dropdown-trigger">Documentation</a>
+            <div class="nav-dropdown-menu">
+              <span class="nav-dropdown-sep"></span>
+              <a href="../code-samples.html" class="nav-dropdown-item">Code samples</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <a href="../code-samples.html" class="btn-icon" aria-label="Back to samples">⌕</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="sample-view-main">
+    <nav class="sample-breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Archivon</a>
+      <span aria-hidden="true">/</span>
+      <a href="../code-samples.html">Code samples</a>
+      <span aria-hidden="true">/</span>
+      <span id="sample-breadcrumb-title">Sample</span>
+    </nav>
+    <article id="sample-view-content">
+      <h1 id="sample-view-title">Loading…</h1>
+      <time id="sample-view-date" class="sample-view-meta"></time>
+      <div class="sample-view-actions">
+        <button type="button" class="btn-browse-code" id="btn-copy-code">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 4v12a2 2 0 002 2h8a2 2 0 002-2V7.242a2 2 0 00-.602-1.43L18 4.302A2 2 0 0016.685 3H10a2 2 0 00-2 2zm2 0h6.685l2 2H10V4zM4 8a2 2 0 012-2h2v2H6v10H4a2 2 0 01-2-2V8z"/></svg>
+          Copy code
+        </button>
+      </div>
+      <div id="sample-view-desc" class="sample-view-desc"></div>
+      <div class="sample-view-tags" id="sample-view-tags"></div>
+      <div class="code-block sample-view-code" id="sample-view-code-block">
+        <div class="code-block-header">
+          <span id="sample-view-lang"></span>
+          <button type="button" class="code-block-copy" id="code-block-copy">Copy</button>
+        </div>
+        <pre><code id="sample-view-code"></code></pre>
+      </div>
+    </article>
+    <p class="sample-view-notfound" id="sample-view-notfound" hidden>Sample not found.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-lang">English</span>
+        <div class="footer-theme">
+          <label for="theme-select">Theme</label>
+          <select id="theme-select" class="theme-select" aria-label="Choose theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="../code-samples.html">Code samples</a>
+        <span class="footer-copy">© Archivon</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/samples-data.js"></script>
+  <script src="../js/sample-view.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

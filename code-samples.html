@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code samples — Archivon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="icon" href="../src/img/Archivon3.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="logo">
+          <img src="src/img/Archivon3.png" alt="Archivon" class="logo-img">
+        </a>
+        <span class="header-sep" aria-hidden="true"></span>
+        <nav class="nav-main">
+          <div class="nav-dropdown">
+            <a href="docs/introducao.html" class="nav-link nav-dropdown-trigger">Documentation</a>
+            <div class="nav-dropdown-menu">
+              <span class="nav-dropdown-sep"></span>
+              <a href="code-samples.html" class="nav-dropdown-item nav-link-active">Code samples</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button type="button" class="btn-icon" id="btn-search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="samples-layout">
+    <aside class="samples-sidebar">
+      <h3 class="samples-sidebar-title">Filter</h3>
+      <div class="samples-filter-group">
+        <label class="samples-filter-label">Topic</label>
+        <input type="text" id="filter-topic" class="samples-filter-input" placeholder="Find a topic" aria-label="Find a topic">
+        <div id="filter-topics-list" class="samples-checkbox-list"></div>
+      </div>
+      <div class="samples-filter-group">
+        <label class="samples-filter-label">Programming language</label>
+        <input type="text" id="filter-lang" class="samples-filter-input" placeholder="Find a language" aria-label="Find a programming language">
+        <div id="filter-langs-list" class="samples-checkbox-list"></div>
+      </div>
+    </aside>
+    <div class="samples-main">
+      <div class="samples-hero">
+        <h1 class="samples-hero-title">Code samples from Archivon</h1>
+        <p class="samples-hero-desc">Get started with code snippets. Explore samples and discover what you can build.</p>
+      </div>
+      <div class="samples-toolbar">
+        <form class="samples-search-form" role="search">
+          <input type="search" id="samples-search" class="samples-search-input" placeholder="Search samples" aria-label="Search code samples" autocomplete="off">
+          <button type="submit" class="samples-search-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Search
+          </button>
+        </form>
+        <p class="samples-results-count" id="samples-results-count">0 results</p>
+      </div>
+      <div class="samples-grid" id="samples-grid"></div>
+      <div class="samples-empty" id="samples-empty" hidden>No samples match your filters.</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-lang">English</span>
+        <a href="#privacy">Privacy</a>
+        <div class="footer-theme">
+          <label for="theme-select">Theme</label>
+          <select id="theme-select" class="theme-select" aria-label="Choose theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="#terms">Terms of use</a>
+        <a href="#contribute">Contribute</a>
+        <span class="footer-copy">© Archivon</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/samples-data.js"></script>
+  <script src="js/code-samples.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

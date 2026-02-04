@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables in JavaScript — Archivon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../index.html" class="logo">
+          <img src="../src/img/Archivon3.png" alt="Archivon" class="logo-img">
+        </a>
+        <span class="header-sep" aria-hidden="true"></span>
+        <nav class="nav-main">
+          <div class="nav-dropdown">
+            <a href="introducao.html" class="nav-link nav-dropdown-trigger nav-link-active">Documentation</a>
+            <div class="nav-dropdown-menu">
+              <span class="nav-dropdown-sep"></span>
+              <a href="../code-samples.html" class="nav-dropdown-item">Code samples</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <a href="../index.html">Home</a>
+      <a href="../questoes.html">Questions</a>
+      <span class="group-title">Introduction</span>
+      <a href="introducao.html">Welcome</a>
+      <span class="group-title">JavaScript</span>
+      <a href="js-variaveis.html" class="active">Variables</a>
+      <a href="js-funcoes.html">Functions</a>
+      <span class="group-title">React</span>
+      <a href="react-componentes.html">Components</a>
+    </aside>
+    <main class="content-area">
+      <h1>Variables in JavaScript</h1>
+      <p>Variables store values for later use. In modern JavaScript we use <code>let</code> and <code>const</code>.</p>
+      <h2>const and let</h2>
+      <p><code>const</code> cannot be reassigned; <code>let</code> can.</p>
+      <div class="code-block">
+        <div class="code-block-header">javascript</div>
+        <pre><code>const name = "Maria";
+let age = 20;
+age = 21;   // ok
+// name = "John";  // error!</code></pre>
+      </div>
+      <h2>Common types</h2>
+      <p>Number, string, boolean, array and object:</p>
+      <div class="code-block">
+        <div class="code-block-header">javascript</div>
+        <pre><code>const num = 42;
+const text = "hello";
+const active = true;
+const list = [1, 2, 3];
+const obj = { key: "value" };</code></pre>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

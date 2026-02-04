@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questions — Archivon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="icon" href="../src/img/Archivon3.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="logo">
+          <img src="src/img/Archivon3.png" alt="Archivon" class="logo-img">
+        </a>
+        <span class="header-sep" aria-hidden="true"></span>
+        <nav class="nav-main">
+          <div class="nav-dropdown">
+            <a href="docs/introducao.html" class="nav-link nav-dropdown-trigger">Documentation</a>
+            <div class="nav-dropdown-menu">
+              <span class="nav-dropdown-sep"></span>
+              <a href="code-samples.html" class="nav-dropdown-item">Code samples</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <a href="index.html">Home</a>
+      <a href="questoes.html" class="active">Questions</a>
+      <span class="group-title">Documentation</span>
+      <a href="docs/introducao.html">Welcome</a>
+      <a href="docs/js-variaveis.html">JS · Variables</a>
+      <a href="docs/js-funcoes.html">JS · Functions</a>
+      <a href="docs/react-componentes.html">React · Components</a>
+    </aside>
+    <main class="content-area">
+      <h1>Questions</h1>
+      <p class="text-muted">Practice with exercises. More questions and automatic checking coming soon.</p>
+      <ul class="questoes-lista">
+        <li class="questao-card">
+          <span class="questao-nivel">Easy</span>
+          <h3>Sum of two numbers</h3>
+          <p>Write a function that takes two numbers and returns their sum.</p>
+        </li>
+        <li class="questao-card">
+          <span class="questao-nivel">Medium</span>
+          <h3>Largest value in an array</h3>
+          <p>Return the largest number in an array (without using Math.max).</p>
+        </li>
+      </ul>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-lang">English</span>
+        <div class="footer-theme">
+          <label for="theme-select">Theme</label>
+          <select id="theme-select" class="theme-select" aria-label="Choose theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="index.html">Home</a>
+        <span class="footer-copy">© Archivon</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
