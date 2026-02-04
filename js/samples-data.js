@@ -57,4 +57,13 @@ window.ARCHIVON_SAMPLES = [
     code: 'function getStorage(key, fallback = null) {\n  try {\n    const raw = localStorage.getItem(key);\n    return raw ? JSON.parse(raw) : fallback;\n  } catch { return fallback; }\n}\nfunction setStorage(key, value) {\n  localStorage.setItem(key, JSON.stringify(value));\n}',
     language: 'javascript',
   },
+  {
+    id: 7,
+    title: 'PHP PDO database connection',
+    description: 'Connect to a MySQL database using PDO (PHP Data Objects). Sets UTF-8 charset and exception mode for errors. Replace host, dbname, user and password with your values.',
+    date: '02/04/2026',
+    tags: ['PHP', 'Database'],
+    code: '<?php\n$host = "localhost"; // database server\n$dbname = "nome_do_banco"; // database name\n$user = "usuario"; // username\n$password = "senha"; // password\n\n// connect to database\ntry {\n  $pdo = new PDO(\n    "mysql:host=$host;dbname=$dbname;charset=utf8",\n    $user,\n    $password\n  );\n  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n  echo "Conectado com sucesso!";\n} catch (PDOException $e) {\n  die("Erro na conexão: " . $e->getMessage());\n}\n?>',
+    language: 'php',
+  },
 ];
