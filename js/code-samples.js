@@ -21,6 +21,17 @@
     return { topics: Object.keys(topics).sort(), langs: Object.keys(langs).sort() };
   }
 
+  function filterVisibleCheckboxes(listEl, query) {
+    if (!listEl) return;
+    var q = (query || '').trim().toLowerCase();
+    listEl.querySelectorAll('.samples-checkbox').forEach(function (label) {
+      var cb = label.querySelector('input[type="checkbox"]');
+      var text = (cb && cb.value) ? cb.value : label.textContent.trim();
+      var show = !q || text.toLowerCase().indexOf(q) >= 0;
+      label.style.display = show ? '' : 'none';
+    });
+  }
+
   function renderFilters() {
     var uniq = getUniqueTags();
     var topicsList = document.getElementById('filter-topics-list');
@@ -41,6 +52,8 @@
         cb.addEventListener('change', applyFilters);
       });
     });
+    filterVisibleCheckboxes(topicsList, document.getElementById('filter-topic') && document.getElementById('filter-topic').value);
+    filterVisibleCheckboxes(langsList, document.getElementById('filter-lang') && document.getElementById('filter-lang').value);
   }
 
   function escapeHtml(s) {
@@ -87,13 +100,12 @@
       }).join('');
       return (
         '<article class="sample-card">' +
-          '<a href="code-samples/view.html?id=' + encodeURIComponent(s.id) + '" class="sample-card-link">' +
-            '<h3 class="sample-card-title">' + escapeHtml(s.title) + '</h3>' +
-            '<time class="sample-card-date" datetime="' + escapeHtml(s.date) + '">' + escapeHtml(s.date) + '</time>' +
-            '<p class="sample-card-desc">' + escapeHtml(s.description || '') + '</p>' +
-            '<div class="sample-card-tags">' + tagsHtml + '</div>' +
-          '</a>' +
-          '<button type="button" class="sample-card-add" aria-label="Add to collection" title="Add to collection">+ Add</button>' +
+          '<h3 class="sample-card-title-wrap">' +
+            '<a href="code-samples/view.html?id=' + encodeURIComponent(s.id) + '" class="sample-card-link">' + escapeHtml(s.title) + '</a>' +
+          '</h3>' +
+          '<time class="sample-card-date" datetime="' + escapeHtml(s.date) + '">' + escapeHtml(s.date) + '</time>' +
+          '<p class="sample-card-desc">' + escapeHtml(s.description || '') + '</p>' +
+          '<div class="sample-card-tags">' + tagsHtml + '</div>' +
         '</article>'
       );
     }).join('');
@@ -108,6 +120,20 @@
     }
     var form = document.querySelector('.samples-search-form');
     if (form) form.addEventListener('submit', function (e) { e.preventDefault(); applyFilters(); });
+    var filterTopicInput = document.getElementById('filter-topic');
+    var filterLangInput = document.getElementById('filter-lang');
+    var topicsList = document.getElementById('filter-topics-list');
+    var langsList = document.getElementById('filter-langs-list');
+    if (filterTopicInput && topicsList) {
+      filterTopicInput.addEventListener('input', function () {
+        filterVisibleCheckboxes(topicsList, filterTopicInput.value);
+      });
+    }
+    if (filterLangInput && langsList) {
+      filterLangInput.addEventListener('input', function () {
+        filterVisibleCheckboxes(langsList, filterLangInput.value);
+      });
+    }
   }
 
   if (document.readyState === 'loading') {

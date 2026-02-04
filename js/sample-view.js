@@ -16,7 +16,6 @@
   var contentEl = document.getElementById('sample-view-content');
   var breadcrumbTitleEl = document.getElementById('sample-breadcrumb-title');
   var codeBlock = document.getElementById('sample-view-code-block');
-  var btnCopyCode = document.getElementById('btn-copy-code');
   var codeBlockCopyBtn = document.getElementById('code-block-copy');
 
   function escapeHtml(s) {
@@ -63,7 +62,6 @@
     setPageTitle(sample.title);
     if (breadcrumbTitleEl) breadcrumbTitleEl.textContent = sample.title;
 
-    if (btnCopyCode) btnCopyCode.addEventListener('click', copyCode);
     if (codeBlockCopyBtn) codeBlockCopyBtn.addEventListener('click', copyCode);
   }
 })();
