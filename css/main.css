@@ -255,47 +255,31 @@ a:hover {
   color: var(--theme-accent-hover);
 }
 
-/* Topic directory — linguagens em cards */
+/* Topic directory — apenas texto (sem quadrados/cards) */
 .directory-langs {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem 2.5rem;
   margin-top: 0;
 }
 
 .directory-lang {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 72px;
-  padding: 1rem 1.25rem;
-  font-size: 1.0625rem;
-  font-weight: 600;
+  font-size: 0.9375rem;
   color: var(--theme-accent);
-  text-align: center;
+  text-align: left;
   text-decoration: none;
-  background: var(--theme-body-background-learn);
-  border: var(--theme-border-subtle);
-  border-radius: var(--radius);
-  transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  padding: 0.25rem 0;
+  transition: color 0.15s ease;
 }
 
 .directory-lang:hover {
   color: var(--theme-accent-hover);
-  border-color: var(--theme-accent);
-  box-shadow: var(--theme-shadow);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .directory-langs {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .directory-langs {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
