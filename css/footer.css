@@ -1,0 +1,62 @@
+/*
+ * Footer — rodapé no estilo Microsoft Learn
+ * Depende das variáveis em main.css
+ */
+
+.footer {
+  padding: 1.25rem var(--content-padding-x, 1.5rem);
+  background: var(--theme-body-background-learn-dark);
+  border-top: var(--theme-border);
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  font-size: 0.9375rem;
+  color: var(--theme-text-muted);
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+}
+
+.footer a {
+  color: var(--theme-text-muted);
+}
+
+.footer a:hover {
+  color: var(--theme-accent);
+}
+
+.footer-theme {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.footer-theme label {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.theme-select {
+  padding: 0.35rem 1.75rem 0.35rem 0.5rem;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  color: var(--theme-text);
+  background: var(--theme-code-background);
+  border: var(--theme-border-subtle);
+  border-radius: var(--radius);
+  cursor: pointer;
+  min-width: 5rem;
+}
