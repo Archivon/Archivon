@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>JavaScript — Download &amp; setup | Archivon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="icon" href="../src/img/Archivon3.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../index.html" class="logo"><img src="../src/img/Archivon3.png" alt="Archivon" class="logo-img"></a>
+        <span class="header-sep" aria-hidden="true"></span>
+        <span class="nav-learn" aria-hidden="true">Learn</span>
+        <nav class="nav-main">
+          <div class="nav-dropdown">
+            <a href="introducao.html" class="nav-link nav-dropdown-trigger"><strong>Documentation</strong></a>
+            <div class="nav-dropdown-menu">
+              <span class="nav-dropdown-sep"></span>
+              <a href="../code-samples.html" class="nav-dropdown-item">Code samples</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button type="button" class="btn-icon" id="btn-search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar">
+      <a href="../index.html">Home</a>
+      <a href="../code-samples.html">Code samples</a>
+      <span class="group-title">Guides</span>
+      <a href="introducao.html">Introduction</a>
+      <a href="php.html">PHP</a>
+      <a href="javascript.html" class="active">JavaScript</a>
+      <a href="python.html">Python</a>
+      <a href="java.html">Java</a>
+      <a href="kotlin.html">Kotlin</a>
+      <a href="csharp.html">C#</a>
+      <a href="cpp.html">C++</a>
+      <a href="c.html">C</a>
+    </aside>
+    <main class="content-area">
+      <div class="lang-hero">
+        <h1>JavaScript</h1>
+        <p class="lang-hero-desc">Run JavaScript in the browser or with Node.js. Choose an IDE and extensions for a better experience.</p>
+      </div>
+      <div class="lang-cards">
+        <a href="https://nodejs.org/" class="lang-card" target="_blank" rel="noopener noreferrer">
+          <span class="lang-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
+          <div class="lang-card-body">
+            <p class="lang-card-label">Download</p>
+            <p class="lang-card-title">Node.js (includes npm)</p>
+          </div>
+        </a>
+        <a href="https://code.visualstudio.com/" class="lang-card" target="_blank" rel="noopener noreferrer">
+          <span class="lang-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+          <div class="lang-card-body">
+            <p class="lang-card-label">IDE</p>
+            <p class="lang-card-title">Visual Studio Code</p>
+          </div>
+        </a>
+      </div>
+      <section class="lang-get-started">
+        <h2>Get started</h2>
+        <p class="lang-get-started-desc">Install Node.js to run JavaScript outside the browser; use VS Code and extensions for editing.</p>
+        <div class="lang-blocks">
+          <div class="lang-block">
+            <h3 class="lang-block-title">Download &amp; install</h3>
+            <ul class="lang-block-list">
+              <li><a href="https://nodejs.org/" class="lang-link" target="_blank" rel="noopener noreferrer">Node.js LTS<span class="lang-link-ext"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></a></li>
+            </ul>
+          </div>
+          <div class="lang-block">
+            <h3 class="lang-block-title">IDE &amp; extensions</h3>
+            <ul class="lang-block-list">
+              <li><a href="https://code.visualstudio.com/" class="lang-link" target="_blank" rel="noopener noreferrer">Visual Studio Code<span class="lang-link-ext"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></a></li>
+              <li><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint" class="lang-link" target="_blank" rel="noopener noreferrer">ESLint<span class="lang-link-ext"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></a></li>
+              <li><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" class="lang-link" target="_blank" rel="noopener noreferrer">Prettier<span class="lang-link-ext"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-lang">English</span>
+        <a href="#privacy">Privacy</a>
+        <div class="footer-theme">
+          <label for="theme-select">Theme</label>
+          <select id="theme-select" class="theme-select" aria-label="Choose theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="#terms">Terms of use</a>
+        <a href="#contribute">Contribute</a>
+        <span class="footer-copy">© Archivon</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/config.js"></script>
+  <script src="../js/sanitize.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
