@@ -1,10 +1,10 @@
 # Security Policy
 
-## Supported Versions
+### Supported Versions
 
 We release updates for the Archivon documentation and code samples site as needed. Security fixes are applied to the current maintained version.
 
-## Reporting a Vulnerability
+### Reporting a Vulnerability
 
 **Archivon** takes security seriously. If you believe you have found a security vulnerability, please report it privately so we can address it before any public disclosure.
 
