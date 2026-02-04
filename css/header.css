@@ -95,10 +95,12 @@
 }
 
 .nav-learn {
-  font-size: 1.5em;
+  font-size: 1.15em;
   font-weight: 400;
   display: inline-block;
   margin-right: 0.5rem;
+  cursor: default;
+  color: var(--theme-text);
   font-family: "Segoe UI", "Segoe UI Variable Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
 }
