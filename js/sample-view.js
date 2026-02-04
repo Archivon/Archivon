@@ -67,7 +67,7 @@
     if (breadcrumbTitleEl) breadcrumbTitleEl.textContent = sample.title;
 
     if (sample.note && noteWrap && noteTitleEl && noteTextEl) {
-      noteTitleEl.textContent = sample.note.title || 'Aviso';
+      noteTitleEl.textContent = sample.note.title || 'Note';
       var text = escapeHtml(sample.note.text || '');
       if (sample.note.linkUrl && sample.note.linkText) {
         var link = '<a href="' + escapeHtml(sample.note.linkUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(sample.note.linkText) + '</a>';
