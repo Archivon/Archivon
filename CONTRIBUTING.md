@@ -2,11 +2,11 @@
 
 Thank you for your interest in contributing to **Archivon**. Below are guidelines to help you get started.
 
-## Contact
+### Contact
 
 The company is **Archivon** and you can reach us at **corporationarchivon@gmail.com**. For questions about contributing, suggesting features, or reporting bugs, contact us by email.
 
-## How to Contribute
+### How to Contribute
 
 **Reporting bugs or suggesting features.** Send a clear description to **corporationarchivon@gmail.com**, or open an issue on the repository if the project is hosted on GitHub. For bugs, include steps to reproduce and, if possible, browser and OS. For features, describe the idea and why it would be useful.
 
