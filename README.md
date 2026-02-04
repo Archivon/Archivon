@@ -1,7 +1,7 @@
 # Archivon
 
 > [!IMPORTANT]  
-> **Aviso Importante:** Este repositório não é open source. O uso está sujeito à Archivon Sample Code License.
+> Este repositório não é open source. O uso está sujeito à Archivon Sample Code License.
 
 **Archivon** is a technical documentation project by the company Archivon. It offers articles, code examples, and exercises on programming tools and technologies.
 
