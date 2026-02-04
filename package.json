@@ -1,0 +1,12 @@
+{
+  "name": "archivon",
+  "version": "1.0.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
