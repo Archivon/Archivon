@@ -3,23 +3,17 @@
  * Define directory topics and other options here.
  */
 window.ARCHIVON_CONFIG = {
-  /** Topics shown in the home directory (3 columns) */
+  /** Topics shown in the home directory (cards: Introduction + languages) */
   directory: [
-    [
-      { label: 'Introduction', href: 'docs/introducao.html' },
-      { label: 'JavaScript · Variables', href: 'docs/js-variaveis.html' },
-      { label: 'JavaScript · Functions', href: 'docs/js-funcoes.html' },
-    ],
-    [
-      { label: 'React · Components', href: 'docs/react-componentes.html' },
-      { label: 'HTML and CSS', href: 'docs/html-css.html' },
-      { label: 'Questions', href: 'questoes.html' },
-    ],
-    [
-      { label: 'Node.js', href: 'docs/nodejs.html' },
-      { label: 'Git', href: 'docs/git.html' },
-      { label: 'Code samples', href: '#codigos' },
-    ],
+    { label: 'Introduction', href: 'docs/introducao.html' },
+    { label: 'PHP', href: 'docs/php.html' },
+    { label: 'JavaScript', href: 'docs/javascript.html' },
+    { label: 'Python', href: 'docs/python.html' },
+    { label: 'Java', href: 'docs/java.html' },
+    { label: 'Kotlin', href: 'docs/kotlin.html' },
+    { label: 'C#', href: 'docs/csharp.html' },
+    { label: 'C++', href: 'docs/cpp.html' },
+    { label: 'C', href: 'docs/c.html' },
   ],
 
   /** Sidebar links on documentation pages */

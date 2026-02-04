@@ -19,25 +19,25 @@
     }
   }
 
-  /** Fill directory from config (optional) */
+  /** Fill directory from config (optional) — flat list as cards (directory-lang) */
   function initDirectory() {
     var grid = document.getElementById('directory-grid');
     var config = window.ARCHIVON_CONFIG;
     if (!grid || !config || !config.directory) return;
 
+    var list = config.directory;
+    var isFlat = list.length > 0 && !Array.isArray(list[0]);
+    if (!isFlat) return;
+
     grid.innerHTML = '';
+    grid.className = 'directory-langs';
     var sanitizeUrl = (window.ARCHIVON_SANITIZE && window.ARCHIVON_SANITIZE.sanitizeUrl) ? window.ARCHIVON_SANITIZE.sanitizeUrl : function (u) { return u == null ? '#' : u; };
-    var escapeHtml = (window.ARCHIVON_SANITIZE && window.ARCHIVON_SANITIZE.escapeHtml) ? window.ARCHIVON_SANITIZE.escapeHtml : function (s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; };
-    config.directory.forEach(function (column) {
-      var col = document.createElement('div');
-      col.className = 'directory-column';
-      column.forEach(function (item) {
-        var a = document.createElement('a');
-        a.href = sanitizeUrl(item.href);
-        a.textContent = item.label;
-        col.appendChild(a);
-      });
-      grid.appendChild(col);
+    list.forEach(function (item) {
+      var a = document.createElement('a');
+      a.href = sanitizeUrl(item.href);
+      a.className = 'directory-lang';
+      a.textContent = item.label;
+      grid.appendChild(a);
     });
   }
 
