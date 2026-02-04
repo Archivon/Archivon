@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Introduction — Archivon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="icon" href="../src/img/Archivon3.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../index.html" class="logo">
+          <img src="../src/img/Archivon3.png" alt="Archivon" class="logo-img">
+        </a>
+        <span class="header-sep" aria-hidden="true"></span>
+        <span class="nav-learn" aria-hidden="true">Learn</span>
+        <nav class="nav-main">
+          <div class="nav-dropdown">
+            <a href="introducao.html" class="nav-link nav-dropdown-trigger nav-link-active"><strong>Documentation</strong></a>
+            <div class="nav-dropdown-menu">
+              <span class="nav-dropdown-sep"></span>
+              <a href="../code-samples.html" class="nav-dropdown-item">Code samples</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button type="button" class="btn-icon" id="btn-search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <a href="../index.html">Home</a>
+      <a href="../code-samples.html">Code samples</a>
+      <span class="group-title">Guides</span>
+      <a href="introducao.html" class="active">Introduction</a>
+      <a href="php.html">PHP</a>
+      <a href="javascript.html">JavaScript</a>
+      <a href="python.html">Python</a>
+      <a href="java.html">Java</a>
+      <a href="kotlin.html">Kotlin</a>
+      <a href="csharp.html">C#</a>
+      <a href="cpp.html">C++</a>
+      <a href="c.html">C</a>
+    </aside>
+    <main class="content-area">
+      <div class="lang-hero">
+        <h1>Introduction</h1>
+        <p class="lang-hero-desc">Why Archivon exists and how it can help you.</p>
+      </div>
+      <p>Archivon was created to help <strong>beginners</strong> learn programming in an <strong>efficient and easy</strong> way. Here you will find:</p>
+      <ul>
+        <li>Step-by-step guides to <strong>download and configure</strong> each language and its tools.</li>
+        <li>Recommendations for <strong>IDEs and extensions</strong> so you can code with confidence.</li>
+        <li><strong>Simple, working code samples</strong> that you can run and adapt.</li>
+      </ul>
+      <p>Our goal is to remove friction: we point you to official downloads, show you which editor and extensions to use, and provide clear examples. No fluff — just what you need to get started.</p>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-lang">English</span>
+        <a href="#privacy">Privacy</a>
+        <div class="footer-theme">
+          <label for="theme-select">Theme</label>
+          <select id="theme-select" class="theme-select" aria-label="Choose theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="#terms">Terms of use</a>
+        <a href="#contribute">Contribute</a>
+        <span class="footer-copy">© Archivon</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/sanitize.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
